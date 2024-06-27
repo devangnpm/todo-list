@@ -1,0 +1,135 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: monospace;
+    overflow: hidden;
+}
+
+button {
+    display: flex;
+    width: 180px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+#content {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.sidebar {
+    border: 2px solid red;
+    width: 450px;
+    justify-content: center;
+}
+
+.project-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    width: 450px;
+    height: 50px;
+    margin-top: 60px;
+    font-size: 3em;
+
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid red;
+    height: 700px;
+    width: 450px;
+    margin-right: 200px;
+}
+
+.project-tab {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    border: 2px solid red;
+    height: 50px;
+    width: 445px;
+    font-size: 2em;
+}
+
+.add-project-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    height: 50px; 
+    width: 445px;
+}
+
+.project-btn {
+    display: flex;
+    margin-left: 265px;
+    margin-top: 10px;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid red;
+    width: 1450px;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 1300px;
+    height: 100px;
+    margin-top: 50px;
+    border: 2px solid red;
+    font-size: 3em;
+}
+
+.todos-container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid red;
+    width: 1300px;
+    height: 800px;
+}
+
+.todo-tab {
+    display: flex;
+    border: 2px solid red;
+    padding: 20px;
+    font-size: 20px;
+
+}
+
+.newTab {
+    display: flex;
+    border: 2px solid red;
+    padding: 20px;
+    font-size: 20px;
+    justify-content: space-between;
+
+}
+
+.taskAdd-Btn {
+    display: flex;
+    border: 2px solid red;
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1076px;
+    font-size: 1.5em;
+}
+
+.taskDeleteBtn {
+    display: flex;
+    border: 2px solid red;
+
+}
