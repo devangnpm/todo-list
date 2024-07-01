@@ -4,9 +4,6 @@ const path = require('path');
 module.exports = {
   entry: {
     index: './src/index.js',
-    renderProject: './src/renderProject.js',
-    createProject: './src/createProject.js',
-    task: './src/Task.js',
   },
   output: {
     filename: '[name].bundle.js',
@@ -14,6 +11,12 @@ module.exports = {
     clean: true,
   },
   devtool: 'inline-source-map',
+  devServer: {
+    static: path.resolve(__dirname, 'dist'),
+    compress: true,
+    port: 9000,
+    open: true,
+  },
   module: {
     rules: [
       {
@@ -33,14 +36,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Main App',
-      template: './src/index.html', // Template can be empty or a minimal template
-      filename: 'index.html',
-      chunks: ['index'],
-      inject: 'body',
+      template: './src/index.html',
     }),
   ],
-  stats: {
-    children: true,
-  },
 };
 

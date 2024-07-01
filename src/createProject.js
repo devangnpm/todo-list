@@ -1,6 +1,4 @@
 import Task  from './Task.js';
-
-
 class createProject {
     constructor(projectName) {
         this.projectName = projectName;
@@ -22,8 +20,21 @@ class createProject {
     deleteTask(taskDescription) {
         this.todos = this.todos.filter(task => task.taskDescription !== taskDescription);
     }
-    
 
+    static saveProjectToLocalStorage(projects) {
+        const projectsJSON = JSON.stringify(projects);
+        localStorage.setItem('projects', projectsJSON);
+    }
+
+    static getProjectsFromLocalStorage() {
+        const projects = JSON.parse(localStorage.getItem('projects')) || [];
+        return projects.map(project => {
+          const newProject = new createProject(project.projectName);
+          newProject.tasks = project.tasks;
+          return newProject;
+        });
+      }
+    
 }
  
 
